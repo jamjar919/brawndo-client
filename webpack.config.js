@@ -9,7 +9,7 @@ const APP_DIR = path.resolve(__dirname, 'src');
 process.traceDeprecation = true;
 
 const config = {
-  entry: APP_DIR + '/root.js',
+  entry: APP_DIR + '/app.js',
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',

@@ -17,4 +17,4 @@ class Root extends React.Component {
 
 }
 
-render(<Root />, document.getElementById('root'));
+export default Root;
