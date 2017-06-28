@@ -1,11 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Root from '../src/root';
+import Root from '../../src/containers/root';
 
 describe('root component', () => {
-
     // setup
-
     let mountedRoot;
     const root = () => {
         if (!mountedRoot) {
@@ -21,7 +19,6 @@ describe('root component', () => {
     });
 
     // tests
-
     it('always renders a div', () => {
         const divs = root().find('div');
         expect(divs.length).toBeGreaterThan(0);

@@ -1,15 +1,18 @@
 import React from 'react';
 
+import HomePage from '../home-page';
+import '../../style/main.scss';
+
 // eslint-disable-next-line react/prefer-stateless-function
-class Navbar extends React.Component {
+class Root extends React.Component {
 
     render() {
         return (
           <div>
-            pretend this is a navbar
+            <HomePage />
           </div>
         );
     }
 }
 
-export default Navbar;
+export default Root;

@@ -48,7 +48,7 @@ const config = {
           }, {
             loader: 'postcss-loader',
             options: {
-              ident: 'postcss', // <---
+              ident: 'postcss',
               plugins: function () {
                 return [
                   require('autoprefixer')
