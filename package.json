@@ -1,6 +1,7 @@
 {
   "name": "react_webpack_boilerplate",
   "version": "1.0.0",
+  "private": true,
   "description": "starter kit for react + webpack development",
   "main": "app.js",
   "scripts": {
