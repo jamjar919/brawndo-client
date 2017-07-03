@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Content extends React.Component {
@@ -6,10 +7,14 @@ class Content extends React.Component {
     render() {
         return (
           <div className="content">
-            content goes here lol xd
+            {this.props.text}
           </div>
         );
     }
 }
+
+Content.propTypes = {
+    text: PropTypes.string,
+};
 
 export default Content;
