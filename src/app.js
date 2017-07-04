@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
+import { applyMiddleware, compose, createStore } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
@@ -9,14 +9,29 @@ import rootReducer from './reducers';
 
 const history = createHistory();
 
-const middleware = routerMiddleware(history);
+const middleware = applyMiddleware(routerMiddleware(history));
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
     rootReducer,
-    applyMiddleware(middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    compose(middleware,
+    window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f),
 );
 /* eslint-enable */
 
 render(<Root store={store} history={history} />, document.getElementById('root'));
+
+/*
+import { applyMiddleware, createStore, compose } from 'redux';
+import { promiseMiddleware, localStorageMiddleware } from './middleware';
+import reducer from './reducer';
+
+const middleware = applyMiddleware(promiseMiddleware, localStorageMiddleware);
+
+const store = createStore(
+  reducer,
+  compose(middleware, window.devToolsExtension ? window.devToolsExtension() : f => f)
+);
+
+export default store;
+*/

@@ -10,8 +10,8 @@ class Navbar extends React.Component {
         return (
           <nav>
             <ul>
-              <li><a to="/" onClick={this.props.navigateTo.bind(this, '/about')} >Home</a></li>
-              <li><a to="/about" onClick={this.props.navigateTo.bind(this, '/about')} >About</a></li>
+              <li><a to="/" onClick={() => this.props.dispatch(push('/'))} >Home</a></li>
+              <li><a to="/about" onClick={() => this.props.dispatch(push('/about'))} >About</a></li>
             </ul>
           </nav>
         );
@@ -19,7 +19,7 @@ class Navbar extends React.Component {
 }
 
 Navbar.propTypes = {
-    navigateTo: PropTypes.func.isRequired,
+    dispatch: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
@@ -27,9 +27,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    navigateTo: (location) => {
-        dispatch(props.context.router.apush(location));
-    },
+    dispatch,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
