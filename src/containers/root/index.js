@@ -17,8 +17,9 @@ class Root extends React.Component {
           <Provider store={this.props.store}>
             { /* ConnectedRouter will use the store from Provider automatically */ }
             <ConnectedRouter history={this.props.history}>
-              <div>
+              <div className="row">
                 <Navbar
+                  className="col-3"
                   context={this.context}
                   navigateTo={this.props.store.dispatch(push(location))}
                 />

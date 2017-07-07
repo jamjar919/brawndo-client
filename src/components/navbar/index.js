@@ -8,18 +8,21 @@ class Navbar extends React.Component {
 
     render() {
         return (
-          <nav>
-            <ul>
-              <li><a to="/" onClick={() => this.props.dispatch(push('/'))} >Home</a></li>
-              <li><a to="/about" onClick={() => this.props.dispatch(push('/about'))} >About</a></li>
-            </ul>
-          </nav>
+          <div className={this.props.className}>
+            <nav>
+              <ul>
+                <li><a to="/" onClick={() => this.props.dispatch(push('/'))} >Home</a></li>
+                <li><a to="/about" onClick={() => this.props.dispatch(push('/about'))} >About</a></li>
+              </ul>
+            </nav>
+          </div>
         );
     }
 }
 
 Navbar.propTypes = {
     dispatch: PropTypes.func,
+    className: PropTypes.string,
 };
 
 const mapStateToProps = state => ({

@@ -34,6 +34,10 @@ const config = {
         use: 'eslint-loader'
       },
       {
+        test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
+        use: 'file-loader'
+      },
+      {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -55,7 +59,7 @@ const config = {
                 ];
               }
             }
-        }]
+          }]
         })
       }
     ]

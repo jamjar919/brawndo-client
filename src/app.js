@@ -20,18 +20,3 @@ const store = createStore(
 /* eslint-enable */
 
 render(<Root store={store} history={history} />, document.getElementById('root'));
-
-/*
-import { applyMiddleware, createStore, compose } from 'redux';
-import { promiseMiddleware, localStorageMiddleware } from './middleware';
-import reducer from './reducer';
-
-const middleware = applyMiddleware(promiseMiddleware, localStorageMiddleware);
-
-const store = createStore(
-  reducer,
-  compose(middleware, window.devToolsExtension ? window.devToolsExtension() : f => f)
-);
-
-export default store;
-*/
