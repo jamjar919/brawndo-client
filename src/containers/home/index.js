@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Content from '../../components/content';
 
@@ -8,15 +7,11 @@ class Home extends React.Component {
 
     render() {
         return (
-          <div className={this.props.className}>
+          <div className="col-md-9">
             <Content text="home page content" />
           </div>
         );
     }
 }
-
-Home.propTypes = {
-    className: PropTypes.string,
-};
 
 export default Home;

@@ -8,7 +8,7 @@ class Navbar extends React.Component {
 
     render() {
         return (
-          <div className={this.props.className}>
+          <div className="col-md-3">
             <nav>
               <ul>
                 <li><a to="/" onClick={() => this.props.dispatch(push('/'))} >Home</a></li>
@@ -22,7 +22,6 @@ class Navbar extends React.Component {
 
 Navbar.propTypes = {
     dispatch: PropTypes.func,
-    className: PropTypes.string,
 };
 
 const mapStateToProps = state => ({

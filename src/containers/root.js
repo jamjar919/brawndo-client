@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import { Route } from 'react-router';
 import { ConnectedRouter, push } from 'react-router-redux';
 
-import Home from '../home';
-import About from '../about';
-import Navbar from '../../components/navbar';
-import '../../style/main.scss';
+import Home from './home';
+import About from './about';
+import Navbar from '../components/navbar';
+import '../style/main.scss';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Root extends React.Component {
