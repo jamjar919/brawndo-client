@@ -76,6 +76,12 @@ const config = {
       inject: 'body'
     }),
     new ExtractTextPlugin('style.css'),
+    new webpack.ProvidePlugin({ // inject ES5 modules as global vars
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      Tether: 'tether'
+    })
   ]
 };
 
