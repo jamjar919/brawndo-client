@@ -72,7 +72,8 @@ const config = {
   devServer: {
     contentBase: APP_DIR + '/public',
     inline: true,
-    stats: 'errors-only'
+    stats: 'errors-only',
+    historyApiFallback: true
   },
   devtool: 'source-map',
   plugins: [
