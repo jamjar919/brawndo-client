@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { Route } from 'react-router';
-import { ConnectedRouter, push } from 'react-router-redux';
+import { ConnectedRouter } from 'react-router-redux';
 
+import Navbar from 'Components/navbar';
 import Home from './home';
 import About from './about';
-import Navbar from '../components/navbar';
 import '../style/main.scss';
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -20,8 +20,6 @@ class Root extends React.Component {
               <div className="row">
                 <Navbar
                   className="col-3"
-                  context={this.context}
-                  navigateTo={this.props.store.dispatch(push(location))}
                 />
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />

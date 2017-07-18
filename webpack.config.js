@@ -15,6 +15,11 @@ const config = {
     filename: 'bundle.js',
     publicPath: '/'
   },
+  resolve: {
+    alias: {
+      Components: path.resolve(APP_DIR, 'components/'),
+    },
+  },
   module: {
     rules: [
       {
