@@ -39,10 +39,6 @@ const config = {
         use: 'eslint-loader'
       },
       {
-        test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
-        use: 'file-loader'
-      },
-      {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -66,7 +62,18 @@ const config = {
             }
           }]
         })
-      }
+      },
+      {
+        test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/',    // where the fonts will go
+            publicPath: '../'       // override the default path
+          }
+        }]
+      },
     ]
   },
   devServer: {

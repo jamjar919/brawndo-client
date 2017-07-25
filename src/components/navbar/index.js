@@ -11,7 +11,7 @@ class Navbar extends React.Component {
           <div className="col-md-3">
             <nav>
               <ul>
-                <li><a to="/" onClick={() => this.props.dispatch(push('/'))} >Home</a></li>
+                <li><a to="/" onClick={() => this.props.dispatch(push('/'))} ><i className="fa fa-home" aria-hidden="true" /> Home</a></li>
                 <li><a to="/about" onClick={() => this.props.dispatch(push('/about'))} >About</a></li>
               </ul>
             </nav>
