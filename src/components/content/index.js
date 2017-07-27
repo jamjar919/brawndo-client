@@ -6,9 +6,9 @@ class Content extends React.Component {
 
     render() {
         return (
-          <div className="content">
-            {this.props.text}
-          </div>
+            <div className="content">
+                {this.props.text}
+            </div>
         );
     }
 }

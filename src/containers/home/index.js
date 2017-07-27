@@ -7,9 +7,9 @@ class Home extends React.Component {
 
     render() {
         return (
-          <div className="col-md-9">
-            <Content text="home page content" />
-          </div>
+            <div className="col-md-9">
+                <Content text="home page content" />
+            </div>
         );
     }
 }

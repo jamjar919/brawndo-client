@@ -18,6 +18,7 @@ const config = {
   resolve: {
     alias: {
       Components: path.resolve(APP_DIR, 'components/'),
+      Containers: path.resolve(APP_DIR, 'containers/'),
     },
   },
   module: {
