@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Content from '../../src/components/content';
+import Content from '../../src/components/Content';
 
 describe('content component', () => {
     // setup
@@ -8,7 +8,7 @@ describe('content component', () => {
     const content = () => {
         if (!mountedContent) {
             mountedContent = mount(
-              <Content />,
+                <Content />,
             );
         }
         return mountedContent;

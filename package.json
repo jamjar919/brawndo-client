@@ -52,6 +52,7 @@
     "webpack-dev-server": "^2.5.1"
   },
   "jest": {
+    "modulePaths": ["src"],
     "transform": {
       "^.+\\.js$": "babel-jest"
     },

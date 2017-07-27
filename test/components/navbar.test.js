@@ -1,6 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Navbar from '../../src/components/navbar';
+import { MemoryRouter } from 'react-router-dom';
+
+import Navbar from '../../src/components/Navbar';
 
 describe('navbar component', () => {
     // setup
@@ -8,7 +10,9 @@ describe('navbar component', () => {
     const navbar = () => {
         if (!mountedNavbar) {
             mountedNavbar = mount(
-              <Navbar />,
+                <MemoryRouter>
+                    <Navbar />
+                </MemoryRouter>,
             );
         }
         return mountedNavbar;

@@ -8,7 +8,7 @@ describe('root component', () => {
     const root = () => {
         if (!mountedRoot) {
             mountedRoot = mount(
-              <Root />,
+                <Root />,
             );
         }
         return mountedRoot;
