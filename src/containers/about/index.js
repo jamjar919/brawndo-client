@@ -1,14 +1,14 @@
 import React from 'react';
-import Content from '../../components/content';
+import Content from 'Components/Content';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class About extends React.Component {
 
     render() {
         return (
-          <div className="col-md-9">
-            <Content text="about page content" />
-          </div>
+            <div className="col-md-9">
+                <Content text="about page content" />
+            </div>
         );
     }
 }

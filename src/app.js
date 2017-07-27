@@ -5,7 +5,7 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
-import Root from './containers/root';
+import Root from 'Containers/root';
 import rootReducer from './reducers';
 
 const history = createHistory();
