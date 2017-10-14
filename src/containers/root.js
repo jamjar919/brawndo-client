@@ -17,12 +17,16 @@ class Root extends React.Component {
             <Provider store={this.props.store}>
                 { /* ConnectedRouter will use the store from Provider automatically */ }
                 <ConnectedRouter history={this.props.history}>
-                    <div className="row">
-                        <Navbar
-                            className="col-3"
-                        />
-                        <Route exact path="/" component={Home} />
-                        <Route exact path="/about" component={About} />
+                    <div className="container">
+                        <div className="row">
+                            <Navbar
+                                className="col-md-12"
+                            />
+                        </div>
+                        <div className="row">
+                            <Route exact path="/" component={Home} />
+                            <Route exact path="/about" component={About} />
+                        </div>
                     </div>
                 </ConnectedRouter>
             </Provider>
