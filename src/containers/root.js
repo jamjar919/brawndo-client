@@ -4,9 +4,9 @@ import { Provider } from 'react-redux';
 import { Route } from 'react-router';
 import { ConnectedRouter } from 'react-router-redux';
 
-import Navbar from 'Components/Navbar';
-import Home from './Home';
-import About from './About';
+import Navbar from '../components/navbar';
+import Home from './home';
+import About from './about';
 import '../style/main.scss';
 
 // eslint-disable-next-line react/prefer-stateless-function

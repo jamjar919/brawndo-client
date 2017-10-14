@@ -94,7 +94,8 @@ const config = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
-      Tether: 'tether'
+      Tether: 'tether',
+      'Popper': 'popper.js'
     })
   ]
 };
