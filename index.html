@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Brawndo Client</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+        integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+        crossorigin=""/>
+        <link rel="stylesheet" href="style.css">        
+    </head>
+    <body>
+        <div id="loader" class="fullscreenrow">
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
+        </div>
+        <div class="row fullscreenrow" id="friendInput" style="display: none">
+            <div class="friendInputsContainer jumbotron">
+                <h1>Brawndo</h1>
+                <div id="friendInputs" class="form-inline">
+                    <button class="btn btn-success" id="addNewInput">+</button>
+                </div>
+                <button class="btn btn-primary" id="searchButton">Search!</button>
+            </div>
+            <div class="row">
+                
+            </div>
+        </div>    
+
+        <div id="mapContainer" style="display: none">
+            <div id="mapInfoContainer">
+                <h1>Results</h1>
+                <div id="mapInfoResultsContainer">
+                    <div class="card">
+                        <img class="card-img-top" src="https://c.tile.openstreetmap.org//13/4094/2724.png" alt="Card image cap">
+                        <div class="card-block">
+                            <h4 class="card-title">£500</h4>
+                            <p class="card-text">Contains <strong>3</strong> flights</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Berlin to London</li>
+                            <li class="list-group-item">Paris to London</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                        <div class="card-block">
+                            <a href="#" class="card-link">View flight breakdown</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="flightDetailContainer">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title">Berlin To London</h4>
+                            <p class="card-text">
+                                Contains 2 stopovers <br>
+                             £5000 <br>
+                             dshadhaod
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="map" class="fullscreenrow">
+            </div>
+            <a id="goBackToFriends">
+                &times;
+            </a>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+        integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+        crossorigin=""></script>
+        <script src="functions.js"></script>
+    </body>
+</html>
